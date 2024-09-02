@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTeach - Transforme Sua Ideia em Renda</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita barras de rolagem extras */
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: auto;
+            background-color: #1c1c1c;
+        }
+
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Faz com que o canvas não interfira com os eventos de clique */
+            z-index: 1; /* Garante que as partículas estão atrás do conteúdo */
+        }
+
+        .navbar {
+            background-color: #1c1c1c;
+        }
+
+        .navbar-brand {
+            color: #00bfff;
+        }
+
+        .navbar-brand:hover {
+            color: #ffffff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00bfff;
+        }
+
+        .hero {
+            position: relative;
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+            background-color: #1c1c1c; /* cor de fundo se as partículas não estiverem carregadas */
+            overflow: hidden; /* evita que as partículas saiam da área visível */
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2; /* Coloca o conteúdo sobre as partículas */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .btn-primary {
+            background-color: #00bfff;
+            border-color: #00bfff;
+        }
+
+        .btn-primary:hover {
+            background-color: #007acc;
+            border-color: #007acc;
+        }
+
+        .section {
+            padding: 60px 0;
+            color: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #00bfff;
+            font-weight: 600;
+        }
+
+        .course-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .course-box {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .course-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-icon {
+            font-size: 3rem;
+            color: #00bfff;
+            margin-bottom: 15px;
+        }
+
+        .course-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .course-text {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .footer {
+            background-color: #1c1c1c;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .promo-icons {
+            font-size: 2rem;
+            color: #00bfff;
+            margin: 20px 0;
+            
+        }
+
+        .promo-icons i {
+            margin: 0 10px;
+        }
+
+        .section-promo {
+            position: relative;
+            color: black;
+            padding: 60px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">WebTeach</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cursos">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#promoções">Promoções</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#contato">Inscreva-se</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container">
+            <h1>Transforme sua Ideia em Renda</h1>
+            <p>Descubra como criar e vender produtos digitais de sucesso com o WebTeach. Acesse cursos exclusivos e aproveite promoções imperdíveis para começar sua jornada agora mesmo!</p>
+            <a class="btn btn-primary" href="#contato">Comece Agora</a>
+        </div>
+    </header>
+
+    <section class="section" id="cursos">
+        <div class="container">
+            <h2 class="section-title">Nosso Curso</h2>
+            <div class="course-container">
+                <div class="course-box">
+                    <div class="course-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="course-title">Aprendizado Prático</h3>
+                    <p class="course-text">Desenvolva suas habilidades com exercícios práticos.</p>
+                </div>
+                <div class="course-box">
+                    <div class="course-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="course-title">Crescimento Profissional</h3>
+                    <p class="course-text">Aumente suas chances de sucesso no mercado.</p>
+                </div>
+                <div class="course-box">
+                    <div class="course-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="course-title">Suporte Contínuo</h3>
+                    <p class="course-text">Conte com nossos especialistas para dúvidas e orientações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-promo" id="promoções">
+        <div class="container text-center">
+            <h2 class="section-title">Promoções Exclusivas</h2>
+            <p class="section-content">Descontos imperdíveis em todos os nossos cursos! Não perca:</p>
+            <div class="promo-icons">
+                <i class="fas fa-percent" title="Descontos de até 50%"></i>
+                <i class="fas fa-tags" title="Ofertas Exclusivas"></i>
+                <i class="fas fa-calendar-day" title="Promoções Diárias"></i>
+            </div>
+            <p class="section-content">Acesse agora e aproveite preços especiais por tempo limitado. Inscreva-se e obtenha o melhor treinamento por um preço reduzido!</p>
+        </div>
+    </section>
+
+    <section class="section" id="contato">
+        <div class="container">
+            <h2 class="section-title">Solicite seu Curso</h2>
+            <p class="section-content">Para saber mais sobre o curso, conteúdos e valores, entre em contato com os seus dados abaixo. Entraremos em contato!</p>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Seu email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 WebTeach. Todos os direitos reservados. | <a href="#home" class="text-light">Voltar ao Topo</a></p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio tradicional do formulário
+        
+            // Captura os dados do formulário
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var mensagem = document.getElementById('mensagem').value;
+        
+            // Formata os dados para a mensagem do WhatsApp
+            var mensagemWhatsApp = `Olá, meu nome é ${nome}. Meu e-mail é ${email}. Minha mensagem é: ${mensagem}.`;
+        
+            // Número de telefone
+            var numeroTelefone = '+5543984991566';
+        
+            // Cria a URL do WhatsApp
+            var url = `https://wa.me/${+5543984991566}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+        
+            // Redireciona para a URL do WhatsApp
+            window.open(url, '_blank');
+        });
+        </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script> <!--Script das particles-js-->
+        particlesJS('particles-js', {
+    "particles": {
+        "number": {
+            "value": 50,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#00bfff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            }
+        },
+        "opacity": {
+            "value": 1,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 2,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 4,
+                "size_min": 0.8,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#00bfff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 0.8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+
+    </script>
+</body>
+</html>
