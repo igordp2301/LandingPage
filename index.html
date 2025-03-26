@@ -4,9 +4,9 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebTeach - Transforme Sua Ideia em Renda</title>
+    <title>WebTeach - Plataforma de Controle Acadêmico</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -19,7 +19,7 @@
             height: 100%;
             margin: 0;
             overflow: auto;
-            background-color: #1c1c1c;
+            background-color: #ffffff;
         }
 
 
@@ -34,31 +34,31 @@
         }
 
         .navbar {
-            background-color: #1c1c1c;
+            background-color: #01033b;
         }
 
         .navbar-brand {
-            color: #00bfff;
+            color: rgb(25, 0, 255);
         }
 
         .navbar-brand:hover {
-            color: #ffffff;
+            color: #1900ff;
         }
 
         .navbar-nav .nav-link {
-            color: #ffffff;
+            color: #1900ff;
         }
 
         .navbar-nav .nav-link:hover {
-            color: #00bfff;
+            color: #1900ff;
         }
 
         .hero {
             position: relative;
-            color: #ffffff;
+            color: #000000;
             padding: 80px 0;
             text-align: center;
-            background-color: #1c1c1c; /* cor de fundo se as partículas não estiverem carregadas */
+            background-color: #ffffff; /* cor de fundo se as partículas não estiverem carregadas */
             overflow: hidden; /* evita que as partículas saiam da área visível */
         }
 
@@ -80,25 +80,25 @@
         }
 
         .btn-primary {
-            background-color: #00bfff;
-            border-color: #00bfff;
+            background-color: #1900ff;
+            border-color: #1900ff;
         }
 
         .btn-primary:hover {
-            background-color: #007acc;
-            border-color: #007acc;
+            background-color: #1900ff;
+            border-color: #1900ff;
         }
 
         .section {
             padding: 60px 0;
-            color: #ffffff;
+            color: #000000;
         }
 
         .section-title {
             text-align: center;
             margin-bottom: 40px;
             font-size: 2.5rem;
-            color: #00bfff;
+            color: #1900ff;
             font-weight: 600;
         }
 
@@ -109,7 +109,7 @@
         }
 
         .course-box {
-            background-color: #1c1c1c;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             width: 30%;
@@ -122,7 +122,7 @@
 
         .course-icon {
             font-size: 3rem;
-            color: #00bfff;
+            color: #1900ff;
             margin-bottom: 15px;
         }
 
@@ -130,17 +130,17 @@
             font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
-            color: #ffffff;
+            color: #1900ff;
         }
 
         .course-text {
             font-size: 1rem;
             font-weight: 400;
-            color: #ffffff;
+            color: #000000;
         }
 
         .footer {
-            background-color: #1c1c1c;
+            background-color: #ffffff;
             padding: 20px 0;
             text-align: center;
         }
@@ -148,12 +148,12 @@
         .footer p {
             margin: 0;
             font-weight: 400;
-            color: #ffffff;
+            color: #000000;
         }
 
         .promo-icons {
             font-size: 2rem;
-            color: #00bfff;
+            color: #000000;
             margin: 20px 0;
             
         }
@@ -167,7 +167,7 @@
             color: black;
             padding: 60px 0;
             text-align: center;
-            color: #ffffff;
+            color: #000000;
         }
     </style>
 </head>
@@ -175,63 +175,56 @@
     <div id="particles-js"></div>
     
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">WebTeach</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+            <img src="logopequenasemfundo.png" alt="WebTeach" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#cursos">Cursos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#promoções">Promoções</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-primary" href="#contato">Inscreva-se</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#promoções">Promoções</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <li class="nav-item"><a class="btn btn-primary" href="#contato">Inscreva-se</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero" id="home">
         <div class="container">
-            <h1>Transforme sua Ideia em Renda</h1>
-            <p>Descubra como criar e vender produtos digitais de sucesso com o WebTeach. Acesse cursos exclusivos e aproveite promoções imperdíveis para começar sua jornada agora mesmo!</p>
+            <h1>Bem-vindo ao WebTeach</h1>
+            <p>Gratuitamente gerencie faltas, notas, disciplinas e alunos de forma simples e eficiente.</p>
             <a class="btn btn-primary" href="#contato">Comece Agora</a>
         </div>
     </header>
 
     <section class="section" id="cursos">
         <div class="container">
-            <h2 class="section-title">Nosso Curso</h2>
+            <h2 class="section-title">Principais Recursos</h2>
             <div class="course-container">
                 <div class="course-box">
                     <div class="course-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="fa-solid fa-book"></i>
                     </div>
-                    <h3 class="course-title">Aprendizado Prático</h3>
-                    <p class="course-text">Desenvolva suas habilidades com exercícios práticos.</p>
+                    <h3 class="course-title">Controle Acadêmico</h3>
+                    <p class="course-text">Gerenciamento de alunos e disciplinas.</p>
                 </div>
                 <div class="course-box">
                     <div class="course-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="course-title">Crescimento Profissional</h3>
-                    <p class="course-text">Aumente suas chances de sucesso no mercado.</p>
+                    <h3 class="course-title">Desempenho do aluno</h3>
+                    <p class="course-text">Registro e acompanhamento de notas.</p>
                 </div>
                 <div class="course-box">
                     <div class="course-icon">
                         <i class="fas fa-user-friends"></i>
                     </div>
-                    <h3 class="course-title">Suporte Contínuo</h3>
-                    <p class="course-text">Conte com nossos especialistas para dúvidas e orientações.</p>
+                    <h3 class="course-title">Acompanhe seu aluno</h3>
+                    <p class="course-text">Controle de frequência e presença.</p>
                 </div>
             </div>
         </div>
@@ -239,21 +232,21 @@
 
     <section class="section-promo" id="promoções">
         <div class="container text-center">
-            <h2 class="section-title">Promoções Exclusivas</h2>
-            <p class="section-content">Descontos imperdíveis em todos os nossos cursos! Não perca:</p>
+            <h2 class="section-title">Ajude nossa ONG!</h2>
+            <p class="section-content">Software de Controle Acadêmico totalmente gratuito para a comunidade!</p>
             <div class="promo-icons">
-                <i class="fas fa-percent" title="Descontos de até 50%"></i>
-                <i class="fas fa-tags" title="Ofertas Exclusivas"></i>
-                <i class="fas fa-calendar-day" title="Promoções Diárias"></i>
+                <i class="fa-regular fa-folder-open"></i>
+                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                <i class="fa-solid fa-piggy-bank"></i>
             </div>
-            <p class="section-content">Acesse agora e aproveite preços especiais por tempo limitado. Inscreva-se e obtenha o melhor treinamento por um preço reduzido!</p>
+            <p class="section-content">Caso seja de seu agrado, você pode estar nos ajudando com uma doação para ajudar com os gastos de desenvolvimento e manutenção! Nosso pix: 123.456.789.10</p>
         </div>
     </section>
 
     <section class="section" id="contato">
         <div class="container">
-            <h2 class="section-title">Solicite seu Curso</h2>
-            <p class="section-content">Para saber mais sobre o curso, conteúdos e valores, entre em contato com os seus dados abaixo. Entraremos em contato!</p>
+            <h2 class="section-title">Saiba mais!</h2>
+            <p class="section-content">Para saber mais sobre a plataforma, benefícios e doações, preencha com os seus dados abaixo. Entraremos em contato!</p>
             <form id="contactForm">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -280,31 +273,33 @@
         </div>
     </footer>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o envio tradicional do formulário
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio tradicional do formulário
+
+    // Captura os dados do formulário
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var mensagem = document.getElementById('mensagem').value;
+
+    // Formata os dados para a mensagem do WhatsApp
+        var mensagemWhatsApp = `Olá, meu nome é ${nome}. Meu e-mail é ${email}. Minha mensagem é: ${mensagem}.`;
+
+    // Número de telefone
+        var numeroTelefone = '5543984991566'; // Sem o "+" dentro da URL
+
+    // Cria a URL do WhatsApp
+        var url = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+
+    // Redireciona para a URL do WhatsApp
+        window.open(url, '_blank');
+});
         
-            // Captura os dados do formulário
-            var nome = document.getElementById('nome').value;
-            var email = document.getElementById('email').value;
-            var mensagem = document.getElementById('mensagem').value;
-        
-            // Formata os dados para a mensagem do WhatsApp
-            var mensagemWhatsApp = `Olá, meu nome é ${nome}. Meu e-mail é ${email}. Minha mensagem é: ${mensagem}.`;
-        
-            // Número de telefone
-            var numeroTelefone = '+5543984991566';
-        
-            // Cria a URL do WhatsApp
-            var url = `https://wa.me/${+5543984991566}?text=${encodeURIComponent(mensagemWhatsApp)}`;
-        
-            // Redireciona para a URL do WhatsApp
-            window.open(url, '_blank');
-        });
         </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
 
     <script> <!--Script das particles-js-->
         particlesJS('particles-js', {
@@ -317,7 +312,7 @@
             }
         },
         "color": {
-            "value": "#00bfff"
+            "value": "#1900ff"
         },
         "shape": {
             "type": "circle",
