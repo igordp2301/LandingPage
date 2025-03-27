@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        .unifil-logo {
+            width: 18px !important; /* Força o tamanho */
+            height: 18px !important; /* Mantém proporção */
+            margin-left: 5px;
+            vertical-align: middle;
+            object-fit: contain; /* Garante que não fique distorcida */
+        }
+
+
+        .team-item img {
+            width: 150px; /* Define um tamanho fixo para todas as imagens */
+            height: 150px; /* Mantém a proporção */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            border-radius: 50%; /* Transforma a imagem em um círculo */
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -34,11 +50,11 @@
         }
 
         .navbar {
-            background-color: #01033b;
+            background-color: #00052d;
         }
 
         .navbar-brand {
-            color: rgb(25, 0, 255);
+            color: #1900ff;
         }
 
         .navbar-brand:hover {
@@ -46,19 +62,19 @@
         }
 
         .navbar-nav .nav-link {
-            color: #1900ff;
+            color: #000000;
         }
 
         .navbar-nav .nav-link:hover {
-            color: #1900ff;
+            color: #000000;
         }
 
         .hero {
             position: relative;
-            color: #000000;
+            color: #ffffff;
             padding: 80px 0;
             text-align: center;
-            background-color: #ffffff; /* cor de fundo se as partículas não estiverem carregadas */
+            background-color: #00052d; /* cor de fundo se as partículas não estiverem carregadas */
             overflow: hidden; /* evita que as partículas saiam da área visível */
         }
 
@@ -71,6 +87,12 @@
             font-size: 3rem;
             margin-bottom: 20px;
             font-weight: 600;
+        }
+
+        .section p{
+            font-size: 1.25rem;
+            text-align: center;
+            font-weight: 400;
         }
 
         .hero p {
@@ -140,7 +162,7 @@
         }
 
         .footer {
-            background-color: #ffffff;
+            background-color: #00052d;
             padding: 20px 0;
             text-align: center;
         }
@@ -148,7 +170,7 @@
         .footer p {
             margin: 0;
             font-weight: 400;
-            color: #000000;
+            color: #ffffff;
         }
 
         .promo-icons {
@@ -185,8 +207,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#promoções">Promoções</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cursos">Escopo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#quem-somos">Quem somos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#comunidade">Comunidade</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 <li class="nav-item"><a class="btn btn-primary" href="#contato">Inscreva-se</a></li>
             </ul>
@@ -203,7 +226,8 @@
 
     <section class="section" id="cursos">
         <div class="container">
-            <h2 class="section-title">Principais Recursos</h2>
+            <h2 class="section-title">Escopo</h2>
+            <p>Muitas instituições de ensino públicas ou privadas, que em sua grande maioria são mais carentes de recursos, não possuem uma plataforma digital para gestão do ensino. Por isso, nós da WebTeach somos uma plataforma de Controle Acadêmico, criada sem fins lucrativos. Nossa meta é levar a tecnologia para todas as instituições de ensino, a fim de melhorar a administração do ensino para todos os estudantes do Brasil!</p>
             <div class="course-container">
                 <div class="course-box">
                     <div class="course-icon">
@@ -230,18 +254,116 @@
         </div>
     </section>
 
-    <section class="section-promo" id="promoções">
-        <div class="container text-center">
-            <h2 class="section-title">Ajude nossa ONG!</h2>
-            <p class="section-content">Software de Controle Acadêmico totalmente gratuito para a comunidade!</p>
-            <div class="promo-icons">
-                <i class="fa-regular fa-folder-open"></i>
-                <i class="fa-solid fa-circle-dollar-to-slot"></i>
-                <i class="fa-solid fa-piggy-bank"></i>
+    
+    <section class="showcase">
+        <!-- Título da Comunidade -->
+        <div class="container">
+            <h2 class="section-title">Comunidade</h2>
+        </div>
+    
+        <div class="container-fluid p-0">
+            <!-- Descrição do Público-Alvo -->
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/comunidade1.jpg')"></div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <h2>Público-Alvo do Projeto</h2>
+                    <p class="lead mb-0">
+                        Este projeto foi desenvolvido para beneficiar instituições de ensino e alunos, com foco em indivíduos que buscam trazer a tecnologia para a gestão de Controle Acadêmico. O objetivo é promover mais eficiência e melhorar a educação em todo o Brasil, democratizando o acesso a soluções digitais e gratuitas para o gerenciamento de informações acadêmicas.
+                    </p>
+                </div>
             </div>
-            <p class="section-content">Caso seja de seu agrado, você pode estar nos ajudando com uma doação para ajudar com os gastos de desenvolvimento e manutenção! Nosso pix: 123.456.789.10</p>
+    
+            <!-- Descrição das Contribuições -->
+            <div class="row g-0">
+                <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/comunidade2.jpg')"></div>
+                <div class="col-lg-6 my-auto showcase-text">
+                    <h2>Como o Projeto Contribui</h2>
+                    <p class="lead mb-0">
+                        O projeto oferece um ambiente colaborativo e educacional que contribui para o crescimento individual e coletivo dos alunos. Ao proporcionar o Controle Acadêmico de forma digital e gratuita, o projeto facilita o acompanhamento de atividades acadêmicas, permitindo maior organização e eficiência. Ele também ajuda instituições de ensino a otimizar seus processos e a promover uma educação mais eficaz e inclusiva.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Impacto Social e Educacional -->
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/comunidade3.jpg')"></div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <h2>Impacto Social e Educacional</h2>
+                    <p class="lead mb-0">
+                        Ao possibilitar o acesso a ferramentas digitais de gestão acadêmica, o projeto visa reduzir desigualdades educacionais, oferecendo suporte às instituições que carecem de recursos. O impacto vai além do aumento de eficiência, pois contribui para uma educação mais inclusiva, acessível e de qualidade em todo o Brasil.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+    
+
+    <section class="section-promo" id="quem-somos">
+        <div class="container text-center">
+            <h2 class="section-title">Quem Somos</h2>
+            <p class="section-content">Conheça nossa equipe de desenvolvimento!</p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid team-img rounded-circle mb-3" src="fernando-greca.jpg" alt="Membro 1" />
+                        <h5>Fernando Barros Greca</h5>
+                        <p class="font-weight-light mb-0">
+                            Engenharia de Software 
+                            <img src="unifil-logo.png" alt="UniFil" class="unifil-logo">
+                        </p>
+                        <a href="https://github.com/FernandoGreca" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid team-img rounded-circle mb-3" src="Igor-removebg-preview.png" alt="Membro 2" />
+                        <h5>Igor Domingues Pereira</h5>
+                        <p class="font-weight-light mb-0">
+                            Engenharia de Software 
+                            <img src="unifil-logo.png" alt="UniFil" class="unifil-logo">
+                        </p>
+                        <a href="https://github.com/igordp2301" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid team-img rounded-circle mb-3" src="samirsemfundo.png" alt="Membro 3" />
+                        <h5>Samir Kaled Ali Chehad</h5>
+                        <p class="font-weight-light mb-0">
+                            Engenharia de Software 
+                            <img src="unifil-logo.png" alt="UniFil" class="unifil-logo">
+                        </p>
+                        <a href="https://github.com/Samir-2024" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="team-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid team-img rounded-circle mb-3" src="caiquesemfundo.png" alt="Membro 4" />
+                        <h5>Caique Marques Serpeloni</h5>
+                        <p class="font-weight-light mb-0">
+                            Engenharia de Software 
+                            <img src="unifil-logo.png" alt="UniFil" class="unifil-logo">
+                        </p>
+                        <a href="https://github.com/cmserpeloni" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid team-img rounded-circle mb-3" src="guilherme.png" alt="Membro 5" />
+                        <h5>Guilherme Ramos Soares</h5>
+                        <p class="font-weight-light mb-0">
+                            Engenharia de Software 
+                            <img src="unifil-logo.png" alt="UniFil" class="unifil-logo">
+                        </p>
+                        <a href="https://github.com/oguilhermeramos" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
     <section class="section" id="contato">
         <div class="container">
