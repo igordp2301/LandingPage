@@ -113,74 +113,54 @@ html, body {
     font-weight: 600;
 }
 
-.course-container {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.showcase h2{
+.showcase h2 {
     font-size: 2rem;
     margin-left: 40px;
     color: #19135b;
-    
 }
 
+/* Container flexível para os quadrados */
 .course-container {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
-    justify-content: space-around;
+    justify-content: center; /* Mantém os itens centralizados */
+    gap: 20px; /* Espaço entre os quadrados */
     text-align: center;
-    gap: 20px; /* Espaço entre os itens */
+    padding: 20px;
 }
 
+/* Configuração dos quadrados */
 .course-box {
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px; /* Ajusta o tamanho mínimo */
+    flex: 1 1 300px; /* Mantém um tamanho flexível */
     max-width: 320px; /* Define um tamanho máximo */
+    text-align: center;
 }
 
-/* Responsivo: empilhar em telas menores */
-@media (max-width: 768px) {
-    .course-container {
-        flex-direction: column; /* Empilha os itens */
-        align-items: center; /* Centraliza os blocos */
-    }
+/* Responsivo: quando a tela for menor que 768px, empilha os quadrados */
 
-    .course-box {
-        width: 90%; /* Ocupa quase toda a largura da tela */
-        max-width: 400px; /* Limita o tamanho */
-    }
-}
 
 .course-box {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px; /* Mantém o layout ajustável */
-    max-width: 320px; /* Define um tamanho máximo */
-    text-align: center; /* Garante que o texto fique alinhado */
+     width: 100%; /* Ocupa quase toda a largura da tela */
+    max-width: 400px; /* Limita o tamanho para não ficar muito grande */
 }
 
-/* Responsivo: faz as caixas ocuparem 100% da largura */
-@media (max-width: 768px) {
-    .course-box {
-        width: 100%; /* Faz com que cada caixa ocupe toda a largura */
-        max-width: 400px; /* Mantém um tamanho máximo */
-    }
-}
 
 .showcase .section-title{
     font-size: 2.5rem;
     color: #1900ff;
 }
 
+.showcase h2 {
+    margin-right: 40px;
+}
+
 .showcase p{
     margin-left: 40px;
+    margin-right: 40px;
 }
 
 .course-box {
